@@ -1,5 +1,5 @@
 # Shorting-Hat-
-codedex 
+#codedex 
 
 gryffindor = 0
 hufflepuff = 0
