@@ -1,0 +1,73 @@
+
+earth_weight = float(input("Enter your weight on Earth (kg): "))
+
+# Ask the user for a planet number
+planet = int(input("Enter a planet number (1 to 7): "))
+
+# Determine the weight on the chosen planet
+if planet == 1:
+    relative_gravity = 0.38
+    print("You chose Mercury.")
+elif planet == 2:
+    relative_gravity = 0.91
+    print("You chose Venus.")
+elif planet == 3:
+    relative_gravity = 0.38
+    print("You chose Mars.")
+elif planet == 4:
+    relative_gravity = 2.53
+    print("You chose Jupiter.")
+elif planet == 5:
+    relative_gravity = 1.07
+    print("You chose Saturn.")
+elif planet == 6:
+    relative_gravity = 0.89
+    print("You chose Uranus.")
+elif planet == 7:
+    relative_gravity = 1.14
+    print("You chose Neptune.")
+else:
+    print("Invalid planet number.")
+    exit()  
+
+planet_weight = earth_weight * relative_gravity
+print(f"Your weight on the selected planet is: {planet_weight:.2f} kg 🚀")
+
+
+
+---------------------------### This is GOOD but not working in codedex ####-----------------------------------
+
+# Ask user for Earth weight
+weight = float(input("Enter your weight on Earth (kg): "))
+
+
+planets = {
+    "1": ("Mercury", 0.38),
+    "2": ("Venus", 0.91),
+    "3": ("Mars", 0.38),
+    "4": ("Jupiter", 2.53),
+    "5": ("Saturn", 1.07),
+    "6": ("Uranus", 0.89),
+    "7": ("Neptune", 1.14)
+}
+
+
+planet = input("Enter planet number (1 to 7): ")
+
+
+if planet in planets:
+    name, gravity = planets[planet]
+    destination_weight = weight * gravity
+    print(f"On {name}, your weight would be {destination_weight:.2f} kg 🚀")
+else:
+    print("Invalid planet number.")
+
+
+
+
+
+
+
+
+
+
